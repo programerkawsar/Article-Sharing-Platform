@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step Five - Documentation</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h3>Step five</h3>
+        <h6 class="font-weight-bold">Setup the application</h6>
+        <p class="text-muted">
+            Enable firebase authentication sign-in providers. First we will enable email/password provider. 
+            You also enable social login like Google, Facebook, Twitter but you have to need create social media app. 
+            <img class="w-100" src="./images/screenshot-36.jpg" alt="Screenshot">
+            <p class="font-weight-bold mt-3">
+                Just enable email/password provider then click on <b class="text-primary">Save</b> button
+            </p>
+            <img class="w-100" src="./images/screenshot-37.jpg" alt="Screenshot">
+            <p class="font-weight-bold mt-3">
+                We will use firestore for store your data. Click on <b class="text-primary">Create database</b> button
+            </p>
+            <img class="w-100" src="./images/screenshot-38.png" alt="Screenshot">
+            <p class="font-weight-bold mt-3">
+                We will first launch the application in test mode to test it
+            </p>
+            <img class="w-100" src="./images/screenshot-39.jpg" alt="Screenshot">
+            <p class="font-weight-bold mt-3">
+                Then select your cloud firestore location
+            </p>
+            <img class="w-100" src="./images/screenshot-40.png" alt="Screenshot">
+            <p class="font-weight-bold mt-3">
+                We have need to change firestore database rules
+                <div class="code">
+                    allow read, write : if request.auth != true; 
+                    allow create, delete, update : if request.auth != null && exists(/databases/$(database)/documents/users/$(request.auth.uid));
+                </div>
+                Add two line and save or finished it
+            </p>
+            <img class="w-100" src="./images/screenshot-41.jpg" alt="Screenshot">
+            <p class="font-weight-bold mt-3">
+                We have brought a lot of data in our application in ascending and descending order so you need to add index to firestore database.
+            </p>
+            <img class="w-100" src="./images/screenshot-49.jpg" alt="Screenshot">
+            <p class="font-weight-bold mt-3">
+                The following screenshot lists all the indexes. Add all the indexes to your database by looking at the screenshot
+            </p>
+            <img class="w-100" src="./images/screenshot-52.jpg" alt="Screenshot">
+            <p class="font-weight-bold mt-3">
+                For example, I am adding the first index of the screenshot.
+            </p>
+            <img class="w-100" src="./images/screenshot-50.jpg" alt="Screenshot">
+            <p class="font-weight-bold mt-3">
+                The index will take some time to build. You add all the indexes shown in the screenshot one by one
+            </p>
+            <img class="w-100" src="./images/screenshot-51.jpg" alt="Screenshot">
+            <p class="font-weight-bold mt-3">
+                Start the development server and open browser press the localhost running url like http://localhost:8080
+            </p>
+            <div class="code">
+                npm run serve
+            </div>
+            <p class="mt-3"></p>
+            <img class="w-100" src="./images/screenshot-42.jpg" alt="Screenshot">
+            <p class="font-weight-bold mt-3">
+                Go to register page
+            </p>
+            <img class="w-100" src="./images/screenshot-43.jpg" alt="Screenshot">
+            <p class="font-weight-bold mt-3">
+                Register a account for admin
+            </p>
+            <img class="w-100" src="./images/screenshot-44.jpg" alt="Screenshot">
+            <p class="font-weight-bold mt-3">
+                When registration successful then go to firestore database and go users collection > document > scroll down and find <b class="text-primary">role</b> field then edit the field and set value 1 
+            </p>
+            <img class="w-100" src="./images/screenshot-45.jpg" alt="Screenshot">
+            <p class="font-weight-bold mt-3">
+                Now admin account has been activated. Go to base url and look on dropdown navigation added a page for admin panel
+            </p>
+            <img class="w-100" src="./images/screenshot-46.jpg" alt="Screenshot">
+            <p class="font-weight-bold mt-3">
+                Now you can control everything from admin panel
+            </p>
+            <img class="w-100" src="./images/screenshot-47.png" alt="Screenshot">  
+        </p>
+    </div>
+</body>
+</html>

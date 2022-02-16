@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step seven - Documentation</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h3>Step seven</h3>
+        <h6 class="font-weight-bold">Deploy project to firebase hosting</h6>
+        <p class="text-muted">
+            In this step i will show you how to deploy your project to firebase hosting. First of all we have to need run a command
+            <div class="code">
+                npm install -g firebase-tools
+            </div>
+            <p class="mt-3 font-weight-bold">If this command has been run before, then there is no need to run it</p>
+            <p class="mt-3 font-weight-bold">When finished firebase-tools installed then run this command</p>
+            <div class="code mb-3">
+                firebase login
+            </div>
+            <p class="mt-3 font-weight-bold">
+                The account with which you created the firebase project must be logged in
+            </p>
+            <img class="w-100" src="./images/screenshot-53.png" alt="Screenshot">
+            <p class="mt-3 font-weight-bold">
+                When login successfully then run this command
+            </p>  
+            <div class="code mb-3">
+                firebase init
+            </div>
+            <p class="mt-3 font-weight-bold">
+                Press <b class="text-primary">Y</b> then enter
+            </p> 
+            <img class="w-100" src="./images/screenshot-54.png" alt="Screenshot">
+            <p class="mt-3 font-weight-bold">
+                Select <b class="text-primary">Firestore</b>, <b class="text-primary">Hosting</b>, <b class="text-primary">Storage</b> then enter
+            </p>   
+            <img class="w-100" src="./images/screenshot-55.png" alt="Screenshot">
+            <p class="mt-3 font-weight-bold">
+                <b class="text-primary">Use an existing project</b> then press enter
+            </p>   
+            <img class="w-100" src="./images/screenshot-56.png" alt="Screenshot">
+            <p class="mt-3 font-weight-bold">
+                Select your project then press enter
+            </p>   
+            <img class="w-100" src="./images/screenshot-57.png" alt="Screenshot">
+            <p class="mt-3 font-weight-bold">
+                Simply press enter
+            </p>   
+            <img class="w-100" src="./images/screenshot-58.png" alt="Screenshot">
+            <p class="mt-3 font-weight-bold">
+                Simply press enter
+            </p>   
+            <img class="w-100" src="./images/screenshot-59.png" alt="Screenshot">
+            <p class="mt-3 font-weight-bold">
+                Write directory folder name is <b class="text-primary">dist</b> because when we build the project then create a dist folder automatically and stored all file on this folder
+            </p>   
+            <img class="w-100" src="./images/screenshot-60.png" alt="Screenshot">
+            <p class="mt-3 font-weight-bold">
+               Press <b class="text-primary">y</b> for use single page application
+            </p>   
+            <img class="w-100" src="./images/screenshot-61.png" alt="Screenshot">
+            <p class="mt-3 font-weight-bold">
+                Simply press enter
+            </p>   
+            <img class="w-100" src="./images/screenshot-62.png" alt="Screenshot">
+            <p class="mt-3 font-weight-bold">
+                Wait for firebase initialization completed
+            </p>   
+            <img class="w-100" src="./images/screenshot-63.png" alt="Screenshot">
+            <p class="mt-3 font-weight-bold">
+                When firebase initialization completed then run a command for build our vuejs project
+            </p> 
+            <div class="code mb-3">
+                npm run build
+            </div> 
+            <p class="mt-3 font-weight-bold">
+                Wait few minutes for build our project
+            </p>   
+            <img class="w-100" src="./images/screenshot-64.png" alt="Screenshot">
+            <p class="mt-3 font-weight-bold">
+                When project builds successfully then run this command for deploy your project to firebase hosting
+            </p>   
+            <div class="code mb-3">
+                firebase deploy
+            </div>
+            <img class="w-100" src="./images/screenshot-65.png" alt="Screenshot">
+            <p class="mt-3 font-weight-bold">
+                When firebase deploy successfully then Go to <b class="text-primary">Firebase console</b> and check <b class="text-primary">Hosting</b> <b class="text-primary">Dashboard</b>.
+                Firebase provide 2 default domain for check your project real server. You can also add your custom domain
+            </p>   
+            <img class="w-100" src="./images/screenshot-66.jpg" alt="Screenshot">  
+        </p>
+    </div>
+</body>
+</html>
